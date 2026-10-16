@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@theme {
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  --color-primary-50: #f0f9f0;
+  --color-primary-100: #dcf1dc;
+  --color-primary-200: #bbe3bc;
+  --color-primary-300: #8ecc8f;
+  --color-primary-400: #5ba95d;
+  --color-primary-500: #3e8c40;
+  --color-primary-600: #2e7030;
+  --color-primary-700: #265928;
+  --color-primary-800: #214723;
+  --color-primary-900: #1c3b1e;
+  --color-primary-950: #0e2010;
+
+  --color-earthy-50: #f7f6f3;
+  --color-earthy-100: #eceae2;
+  --color-earthy-200: #d9d5c5;
+  --color-earthy-300: #c0b89f;
+  --color-earthy-400: #a79a7a;
+  --color-earthy-500: #948461;
+  --color-earthy-600: #7f6f52;
+  --color-earthy-700: #6a5b46;
+  --color-earthy-800: #584c3c;
+  --color-earthy-900: #4a4135;
+  --color-earthy-950: #3a2f28;
+
+  --spacing-fluid-1: clamp(0.5rem, 1vw, 1rem);
+  --spacing-fluid-2: clamp(1rem, 2vw, 2rem);
+  --spacing-fluid-3: clamp(2rem, 4vw, 4rem);
+  --spacing-fluid-4: clamp(4rem, 8vw, 8rem);
+  --spacing-fluid-5: clamp(8rem, 12vw, 12rem);
+}
+
+:root {
+  --primary: #3e8c40;
+  --primary-dark: #2e7030;
+  --earthy: #948461;
+  --bg-light: #f7f6f3;
+}
+
+/* Global Resets */
+html {
+  scroll-behavior: auto !important;
+  scroll-padding-top: 100px;
+  overflow-x: hidden;
+  height: auto;
+  font-size: 16px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  @apply font-body text-earthy-900 bg-earthy-950 selection:bg-primary-200 selection:text-primary-900;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip; /* Clip horizontal overflow without triggering scroll container */
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.section-padding {
+  @apply py-fluid-4 px-fluid-2;
+}
+
+.container-wide {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.btn-primary {
+  @apply relative overflow-hidden bg-primary-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-500 hover:bg-primary-700 hover:shadow-[0_20px_40px_-15px_rgba(62,140,64,0.3)] active:scale-95 inline-flex items-center gap-2;
+}
+
+.btn-primary::after {
+  content: '';
+  @apply absolute inset-0 bg-white/20 translate-y-full transition-transform duration-500;
+}
+
+.btn-primary:hover::after {
+  @apply translate-y-0;
+}
+
+.btn-outline {
+  @apply border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full font-medium transition-all duration-500 hover:bg-primary-600 hover:text-white active:scale-95 inline-flex items-center gap-2;
+}
+
+/* Micro-interactions */
+.hover-lift {
+  @apply transition-transform duration-500 hover:-translate-y-2;
+}
+
+.hover-glow {
+  @apply transition-all duration-500 hover:shadow-[0_20px_50px_-20px_rgba(62,140,64,0.2)];
+}
+
+/* Text Reveal Animation Classes */
+.line {
+  @apply overflow-hidden;
+}
+
+.word {
+  @apply inline-block;
+}
+
+/* Lenis CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading text-earthy-950 leading-tight;
+}
