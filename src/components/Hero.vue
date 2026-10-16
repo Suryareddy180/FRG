@@ -1,5 +1,6 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowDown } from 'lucide-vue-next'
@@ -105,9 +106,10 @@ onUnmounted(() => {
         <img
           :key="currentHeroImage"
           :src="currentHeroImage"
-          alt="Lush landscape"
+          alt="Fortune Rise Groups - Landscape Architecture and Garden Design in Hyderabad"
           class="hero-parallax w-full h-[120%] object-cover will-change-transform"
           loading="eager"
+          fetchpriority="high"
           @error="handleImageError"
         />
       </Transition>
@@ -124,14 +126,14 @@ onUnmounted(() => {
       </p>
       <!-- Logo below description (mobile only) -->
       <div class="flex justify-center mb-10 lg:hidden">
-        <img :src="frgLogo" alt="Fortune Rise Groups" class="h-36 sm:h-40 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
+        <img :src="frgLogo" alt="Fortune Rise Groups logo" class="h-36 sm:h-40 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
       </div>
       <div ref="ctaRef" class="flex flex-col sm:flex-row items-center justify-center gap-8">
-        <a href="/index.html#projects" class="btn-primary group text-lg px-10 py-5">
+        <RouterLink to="/projects" class="btn-primary group text-lg px-10 py-5">
           <span>Explore Our Projects</span>
           <ArrowDown class="w-5 h-5 transition-transform group-hover:translate-y-1" />
-        </a>
-        <a href="/index.html#about" class="group flex items-center gap-3 text-white font-medium text-lg hover:text-primary-400 transition-all">
+        </RouterLink>
+        <a href="#about" class="group flex items-center gap-3 text-white font-medium text-lg hover:text-primary-400 transition-all">
           <span class="relative">
             Learn More About Us
             <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-400 transition-all group-hover:w-full"></span>

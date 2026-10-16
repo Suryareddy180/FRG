@@ -40,7 +40,7 @@ onUnmounted(() => {
   <div class="selection:bg-primary-600 selection:text-white bg-white">
     <Navbar />
     <main class="pt-20">
-      <Contact id="contact" />
+      <Contact id="contact" :is-page="true" />
     </main>
     <Footer />
   </div>

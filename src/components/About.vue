@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Sprout, Eye, Target, ArrowRight } from 'lucide-vue-next'
@@ -60,9 +61,11 @@ onMounted(() => {
           <div class="relative aspect-[4/5] overflow-hidden rounded-[3rem] shadow-2xl group">
             <img
               :src="aboutImg"
-              alt="Lush green garden"
+              alt="Fortune Rise Groups garden landscaping and design in Hyderabad"
+              width="1000"
+              height="1200"
               class="about-image-img w-full h-[120%] object-cover absolute top-[-10%]"
-              loading="auto"
+              loading="lazy"
               decoding="async"
               @error="handleImageError"
             />
@@ -97,10 +100,10 @@ onMounted(() => {
           </div>
 
           <div class="pt-6">
-            <a href="#contact" class="group inline-flex items-center gap-4 text-earthy-950 font-bold text-lg">
+            <RouterLink to="/contact" class="group inline-flex items-center gap-4 text-earthy-950 font-bold text-lg">
               <span class="border-b-2 border-primary-500 pb-1 group-hover:text-primary-600 transition-colors">Let's grow something beautiful together</span>
               <ArrowRight class="w-5 h-5 text-primary-600 transition-transform group-hover:translate-x-2" />
-            </a>
+            </RouterLink>
           </div>
         </div>
       </div>

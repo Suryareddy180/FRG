@@ -8,14 +8,21 @@ gsap.registerPlugin(ScrollTrigger)
 
 const contactRef = ref(null)
 
+const props = defineProps({
+  isPage: {
+    type: Boolean,
+    default: false
+  }
+})
+
 const directionsUrl = 'https://maps.app.goo.gl/Er2RvfCUTYXQch7Y9'
 const mapEmbedUrl =
   'https://www.google.com/maps?q=Phase+2,+Shanthi+Nilayam,+15-25%2F648,+Kukatpally+Housing+Board+Colony,+KPHB+Phase+2,+Kukatpally,+Hyderabad,+Telangana+500072&output=embed'
 const phoneDisplay = '098678 90999'
-const phoneHref = 'tel:+9198678909999'
+const phoneHref = 'tel:+919867890999'
 const emailAddress = 'connect@fortunerisegroups.in'
 const emailHref = 'mailto:connect@fortunerisegroups.in'
-const whatsappHref = 'https://wa.me/9198678909999'
+const whatsappHref = 'https://wa.me/919867890999'
 
 onMounted(() => {
   gsap.from('.location-card', {
@@ -54,9 +61,9 @@ onMounted(() => {
           <span class="w-2 h-2 rounded-full bg-primary-600"></span>
           <span class="text-earthy-700 font-medium text-xs uppercase tracking-widest">Contact / Location</span>
         </div>
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-earthy-950">
+        <component :is="isPage ? 'h1' : 'h2'" class="text-4xl md:text-5xl font-heading font-bold text-earthy-950">
           Visit Our <span class="text-primary-600 italic">Office</span>
-        </h2>
+        </component>
         <p class="text-lg text-earthy-600 max-w-2xl mx-auto">
           A clean and clear location hub to find us quickly and get directions without any hassle.
         </p>

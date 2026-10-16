@@ -78,7 +78,7 @@ const navLinks = [
     >
       <!-- Logo -->
 
-      <RouterLink to="/#home" class="flex items-center gap-3 group">
+      <RouterLink to="/" class="flex items-center gap-3 group">
         <img
           :src="logoSrc"
           alt="Fortune Rise Groups logo"
@@ -162,7 +162,7 @@ const navLinks = [
          class="absolute top-full left-6 right-6 mt-4 bg-earthy-950/95 backdrop-blur-2xl shadow-2xl rounded-4xl xl:hidden flex flex-col p-6 gap-1 border border-earthy-800/80"
       >
         <RouterLink
-          to="/index.html#home"
+          to="/"
           class="text-white font-heading font-medium text-base py-2.5 border-b border-earthy-800 flex items-center justify-between group"
           @click="isMenuOpen = false"
         >

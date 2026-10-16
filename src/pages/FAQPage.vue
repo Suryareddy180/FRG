@@ -6,19 +6,19 @@ import Footer from '@/components/Footer.vue'
 
 const faqItems = [
   {
-    question: 'What landscaping services does FRG provide?',
+    question: 'What landscaping services does Fortune Rise Groups provide?',
     answer:
-      'We handle end-to-end landscape work including concept planning, hardscape and softscape execution, terrace garden development, irrigation layout, and long-term maintenance support for residential, commercial, farmhouse, and industrial sites.'
+      'We handle end-to-end landscape work including 3D landscape designing services, hardscape and softscape execution, terrace landscape gardening, roof gardening services, automated irrigation layouts, and long-term garden maintenance services for residential, commercial, farmhouse, and industrial sites.'
   },
   {
     question: 'Do you work only in Hyderabad?',
     answer:
-      'Our core operations are in Hyderabad, Secunderabad, Gachibowli, Kukatpally, Jubilee Hills, and Banjara Hills. We also take up projects across Telangana and Andhra Pradesh depending on project scope.'
+      'Our core design and execution operations are in Hyderabad, Secunderabad, Gachibowli, Kukatpally, Jubilee Hills, and Banjara Hills. We also take up large residential, resort, and farmhouse projects across Telangana and Andhra Pradesh.'
   },
   {
     question: 'How is project cost estimated?',
     answer:
-      'Pricing is based on site area, design complexity, material selection, irrigation requirements, and maintenance expectations. After a site visit and discussion, we share a clear proposal with scope and phase-wise cost breakup.'
+      'Pricing is calculated based on site square footage, design complexity, 3D visualization requirements, natural stone and hardscape selection, plant palettes, irrigation automation, and long-term maintenance expectations. Following an on-site consultation, we share a transparent itemized estimate.'
   },
   {
     question: 'How long does a typical landscape project take?',
@@ -26,14 +26,19 @@ const faqItems = [
       'Smaller residence projects can be completed in a few weeks, while larger layouts or commercial campuses may take multiple phases. We provide a realistic timeline after finalizing design and material approvals.'
   },
   {
-    question: 'Can you redesign an existing garden instead of building from scratch?',
+    question: 'Can you redesign an existing garden or rock garden instead of starting from scratch?',
     answer:
-      'Yes. We regularly upgrade existing outdoor spaces by improving layout flow, replacing underperforming plants, upgrading irrigation, and introducing durable hardscape elements without unnecessary rework.'
+      'Yes. We regularly upgrade existing spaces by refreshing plant palettes, rejuvenating lawn grass, installing rock garden features, upgrading irrigation, and introducing durable paving without unnecessary structural disruption.'
   },
   {
-    question: 'Do you provide post-completion maintenance?',
+    question: 'Do you provide ongoing landscape and garden maintenance services?',
     answer:
-      'Yes. We offer maintenance plans that include pruning cycles, lawn care, nutrient support, irrigation checks, and seasonal replacement guidance so the landscape remains healthy and visually consistent.'
+      'Yes. We offer structured monthly and quarterly maintenance plans covering seasonal pruning, organic soil nourishment, pest monitoring, lawn mowing, rock garden maintenance services, and automated drip irrigation checks.'
+  },
+  {
+    question: 'Do you design and execute farmhouse landscapes?',
+    answer:
+      'Yes. Our experienced landscape architects and designers specialize in farmhouse master planning, entry tree canopies, organic fruit orchards, swimming pool surrounds, and leisure sit-outs across Hyderabad and outskirts.'
   },
   {
     question: 'Can I see past work before starting?',
@@ -41,9 +46,9 @@ const faqItems = [
       'Absolutely. You can browse our project portfolio by category and also view project-specific case studies in our blog section to understand planning decisions and real execution outcomes.'
   },
   {
-    question: 'How do I start a new project with FRG?',
+    question: 'How do I start a new project with Fortune Rise Groups?',
     answer:
-      'You can contact us through the contact page or call directly. Our team schedules a consultation, understands your requirements, and then suggests a tailored design and execution approach.'
+      'You can contact us through our contact page or call +91-9867890999 directly. Our team schedules a consultation, evaluates your site, and recommends a tailored design and execution approach.'
   }
 ]
 </script>

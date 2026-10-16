@@ -143,8 +143,10 @@ onUnmounted(() => {
               <img
                 v-if="item.type === 'image'"
                 :src="item.src"
-                :alt="`${project.title} image ${index + 1}`"
+                :alt="`${project.title} - ${project.category} Landscape Project photo ${index + 1}`"
                 class="w-full h-80 object-cover cursor-zoom-in"
+                loading="lazy"
+                decoding="async"
               />
 
               <video

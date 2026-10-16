@@ -61,7 +61,7 @@ onMounted(() => {
         <div class="mb-16">
           <div class="max-w-4xl space-y-6">
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-earthy-950 max-w-3xl">
-              <span v-if="activeCategory">{{ activeCategory.label }}</span>
+              <span v-if="activeCategory">{{ activeCategory.label }} <span class="text-primary-600 italic">Landscaping Projects</span></span>
               <template v-else>
                 Project Portfolio Built Across <span class="text-primary-600 italic">Residential and Commercial</span> Spaces
               </template>
@@ -103,9 +103,12 @@ onMounted(() => {
               <div class="relative overflow-hidden rounded-4xl aspect-4/3 bg-earthy-100">
                 <img
                   :src="getProjectImage(project)"
-                  :alt="project.title"
+                  :alt="`${project.title} - ${project.category} Landscape Project in ${project.location} by Fortune Rise Groups`"
+                  width="600"
+                  height="450"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div class="absolute inset-0 bg-earthy-950/15 group-hover:bg-earthy-950/35 transition-colors duration-500"></div>
                 <div class="absolute top-6 left-6 px-3 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[11px] font-semibold tracking-[0.14em] uppercase text-primary-700 shadow-lg">

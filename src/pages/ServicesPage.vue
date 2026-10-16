@@ -41,7 +41,7 @@ onUnmounted(() => {
   <div class="selection:bg-primary-600 selection:text-white bg-white">
     <Navbar />
     <main class="pt-20">
-      <Services id="services" />
+      <Services id="services" :is-page="true" />
       <CTA />
     </main>
     <Footer />

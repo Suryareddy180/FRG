@@ -18,6 +18,13 @@ const photoMap = Object.entries(photoModules).reduce((acc, [path, src]) => {
   return acc
 }, {})
 
+const props = defineProps({
+  isPage: {
+    type: Boolean,
+    default: false
+  }
+})
+
 const getInitials = (name) =>
   name.split(' ').map((n) => n[0]).join('').slice(0, 2).toUpperCase()
 
@@ -108,9 +115,9 @@ onMounted(() => {
           <span class="w-2 h-2 rounded-full bg-primary-600"></span>
           <span class="text-earthy-700 font-medium text-xs uppercase tracking-widest">Our Team</span>
         </div>
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-earthy-950">
+        <component :is="isPage ? 'h1' : 'h2'" class="text-4xl md:text-5xl font-heading font-bold text-earthy-950">
           The Creative <span class="text-primary-600 italic">Minds</span>
-        </h2>
+        </component>
         <p class="text-lg text-earthy-600 max-w-2xl mx-auto">
           Shaping meaningful outdoor and architectural spaces with expertise and passion.
         </p>
@@ -125,8 +132,12 @@ onMounted(() => {
               <img
                 v-if="photoMap[ceo.photo]"
                 :src="photoMap[ceo.photo]"
-                :alt="ceo.name"
+                :alt="`${ceo.name} - ${ceo.role} at Fortune Rise Groups`"
+                width="80"
+                height="80"
                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 v-else
@@ -160,8 +171,12 @@ onMounted(() => {
               <img
                 v-if="photoMap[member.photo]"
                 :src="photoMap[member.photo]"
-                :alt="member.name"
+                :alt="`${member.name} - ${member.role} at Fortune Rise Groups`"
+                width="80"
+                height="80"
                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 v-else

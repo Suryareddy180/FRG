@@ -30,10 +30,17 @@ const categoryImageFallbacks = {
 
 const getServiceImage = (category) => allProjects.find((project) => project.category === category)?.image ?? categoryImageFallbacks[category] ?? service1
 
+const props = defineProps({
+  isPage: {
+    type: Boolean,
+    default: false
+  }
+})
+
 const services = [
   {
     title: 'Commercial',
-    description: 'Professional landscaping for corporate offices, business parks, and retail centers.',
+    description: 'Landscape contracting and office gardening services for corporate campuses, business parks, and retail centers.',
     icon: Building2,
     color: 'bg-blue-50',
     iconColor: 'text-blue-600',
@@ -42,7 +49,7 @@ const services = [
   },
   {
     title: 'Residences',
-    description: 'Bespoke conceptual designs and 3D modeling for your dream outdoor space.',
+    description: 'Bespoke 3D landscape designing, residential terrace landscape gardening, and roof gardening services for villas and luxury homes.',
     icon: Home,
     color: 'bg-primary-50',
     iconColor: 'text-primary-600',
@@ -51,7 +58,7 @@ const services = [
   },
   {
     title: 'Farmhouse',
-    description: 'Thoughtfully crafted landscape designs for farmhouses and rural retreats.',
+    description: 'Specialized architects for farm house landscapes, rural estate master planning, rock gardens, and natural water features.',
     icon: Sprout,
     color: 'bg-earthy-100',
     iconColor: 'text-earthy-700',
@@ -60,7 +67,7 @@ const services = [
   },
   {
     title: 'Resorts',
-    description: 'Elegant outdoor experiences for hotels, boutique resorts, and fine dining.',
+    description: 'Turnkey outdoor landscape designing services for boutique resorts, luxury hotels, and destination retreats.',
     icon: Hotel,
     color: 'bg-rose-50',
     iconColor: 'text-rose-600',
@@ -69,7 +76,7 @@ const services = [
   },
   {
     title: 'Industrial',
-    description: 'Functional and aesthetic landscape solutions for industrial and manufacturing facilities.',
+    description: 'Durable landscape architecture, green belts, and functional outdoor solutions for pharmaceutical and manufacturing facilities.',
     icon: Hammer,
     color: 'bg-orange-50',
     iconColor: 'text-orange-600',
@@ -78,7 +85,7 @@ const services = [
   },
   {
     title: 'Realestate',
-    description: 'Comprehensive landscaping and site development for real estate ventures and large-scale developments.',
+    description: 'Master garden developers and lawn grass distributors for gated communities, layout parks, and large-scale ventures.',
     icon: Building2,
     color: 'bg-green-50',
     iconColor: 'text-green-600',
@@ -126,9 +133,9 @@ onMounted(() => {
             <span class="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span>
             <span class="text-primary-700 font-medium text-xs uppercase tracking-widest">Our Expertise</span>
           </div>
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-earthy-950">
+          <component :is="isPage ? 'h1' : 'h2'" class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-earthy-950">
             Our <span class="text-primary-600 italic">Landscaping</span> Solutions
-          </h2>
+          </component>
           <p class="text-lg text-earthy-600 leading-relaxed">
             We offer a comprehensive range of services to bring your outdoor vision to life, from initial design to final implementation and ongoing care.
           </p>
@@ -151,9 +158,11 @@ onMounted(() => {
           <div class="relative overflow-hidden rounded-2xl aspect-16/10 mb-8">
             <img
               :src="service.image"
-              :alt="service.title"
+              :alt="`Fortune Rise Groups - ${service.title} Landscape Designing and Gardening Services in Hyderabad`"
+              width="800"
+              height="500"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              :loading="index < 3 ? 'eager' : 'auto'"
+              :loading="index < 3 ? 'eager' : 'lazy'"
               :fetchpriority="index < 3 ? 'high' : 'auto'"
               decoding="async"
             />

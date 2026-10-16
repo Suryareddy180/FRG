@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowRight } from 'lucide-vue-next'
@@ -43,9 +44,9 @@ onMounted(() => {
       <div class="absolute inset-0 z-0 overflow-hidden">
         <img
           :src="ctaBg"
-          alt="Lush green garden"
+          alt="Fortune Rise Groups landscape design and garden execution"
           class="cta-bg-img w-full h-[120%] object-cover opacity-20 absolute top-[-10%] will-change-transform"
-          loading="auto"
+          loading="lazy"
           decoding="async"
         />
         <!-- Gradient Overlay -->
@@ -65,16 +66,16 @@ onMounted(() => {
             From concept to creation, we're here to turn your vision into reality. Let's build something beautiful together.
           </p>
           <div class="flex flex-col sm:flex-row gap-8">
-            <a href="#contact" class="btn-primary text-lg px-10 py-5 group shadow-xl">
+            <RouterLink to="/contact" class="btn-primary text-lg px-10 py-5 group shadow-xl">
               <span>Get a Free Quote</span>
               <ArrowRight class="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a href="/index.html#projects" class="group flex items-center gap-4 text-white font-medium text-lg hover:text-primary-400 transition-all py-5 px-6">
+            </RouterLink>
+            <RouterLink to="/projects" class="group flex items-center gap-4 text-white font-medium text-lg hover:text-primary-400 transition-all py-5 px-6">
               <span class="relative">
                 View Our Projects
                 <span class="absolute bottom-0 left-0 w-full h-[1px] bg-white/20 group-hover:bg-primary-400 transition-colors"></span>
               </span>
-            </a>
+            </RouterLink>
           </div>
         </div>
 

@@ -154,7 +154,9 @@ onUnmounted(() => {
           >
             <img
               :src="post.project.image"
-              :alt="post.project.title"
+              :alt="`${post.title} - ${post.project.title} Landscape Case Study by Fortune Rise Groups`"
+              width="600"
+              height="300"
               class="w-full h-64 object-cover"
               loading="lazy"
               decoding="async"
