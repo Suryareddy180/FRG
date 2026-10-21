@@ -41,30 +41,38 @@ const handleImageError = (e) => {
 }
 
 onMounted(() => {
-  // Split headline text for character animation
-  const splitHeadline = new SplitType(headlineRef.value, { types: 'chars,words' })
-  
-  const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
-  
-  tl.set(headlineRef.value, { opacity: 1 })
-    .from(splitHeadline.chars, {
-      y: 100,
+  const isMobile = window.matchMedia('(max-width: 768px)').matches
+
+  if (!isMobile) {
+    // Split headline text for character animation on desktop
+    const splitHeadline = new SplitType(headlineRef.value, { types: 'chars,words' })
+    const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
+
+    tl.from(splitHeadline.chars, {
+      y: 80,
       opacity: 0,
       rotateX: -90,
       stagger: 0.02,
-      duration: 1.5,
+      duration: 1.2,
     })
-    .from(subtextRef.value, {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-    }, '-=1')
-    .from(ctaRef.value.children, {
-      y: 20,
-      opacity: 0,
-      stagger: 0.15,
-      duration: 0.8,
-    }, '-=0.8')
+      .from(subtextRef.value, {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+      }, '-=0.8')
+      .from(ctaRef.value.children, {
+        y: 15,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.6,
+      }, '-=0.6')
+  } else {
+    // Fast, reflow-free animation for mobile devices
+    const tl = gsap.timeline({ defaults: { ease: 'power2.out' } })
+    tl.from(headlineRef.value, { y: 20, opacity: 0, duration: 0.6 })
+      .from(subtextRef.value, { y: 15, opacity: 0, duration: 0.6 }, '-=0.4')
+      .from(ctaRef.value.children, { y: 10, opacity: 0, stagger: 0.1, duration: 0.5 }, '-=0.3')
+  }
 
   // Parallax effect on background image
   gsap.to('.hero-parallax', {
@@ -80,8 +88,8 @@ onMounted(() => {
 
   // Subtle zoom effect on load
   gsap.from('.hero-parallax', {
-    scale: 1.1,
-    duration: 3,
+    scale: 1.05,
+    duration: 2.5,
     ease: 'expo.out'
   })
 
@@ -107,6 +115,8 @@ onUnmounted(() => {
           :key="currentHeroImage"
           :src="currentHeroImage"
           alt="Fortune Rise Groups - Landscape Architecture and Garden Design in Hyderabad"
+          width="1920"
+          height="1080"
           class="hero-parallax w-full h-[120%] object-cover will-change-transform"
           loading="eager"
           fetchpriority="high"
@@ -126,7 +136,7 @@ onUnmounted(() => {
       </p>
       <!-- Logo below description (mobile only) -->
       <div class="flex justify-center mb-10 lg:hidden">
-        <img :src="frgLogo" alt="Fortune Rise Groups logo" class="h-36 sm:h-40 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
+        <img :src="frgLogo" alt="Fortune Rise Groups logo" width="160" height="160" class="h-36 sm:h-40 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
       </div>
       <div ref="ctaRef" class="flex flex-col sm:flex-row items-center justify-center gap-8">
         <RouterLink to="/projects" class="btn-primary group text-lg px-10 py-5">

@@ -1,13 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
-import Projects from '../pages/Projects.vue'
-import ProjectDetail from '../pages/ProjectDetail.vue'
-import ServicesPage from '../pages/ServicesPage.vue'
-import TeamPage from '../pages/TeamPage.vue'
-import ContactPage from '../pages/ContactPage.vue'
-import ClientsPage from '../pages/ClientsPage.vue'
-import BlogPage from '../pages/BlogPage.vue'
-import FAQPage from '../pages/FAQPage.vue'
 import { applyRouteSeo } from '@/seo'
 
 const routes = [
@@ -19,43 +11,43 @@ const routes = [
   {
     path: '/projects/:category?',
     name: 'Projects',
-    component: Projects
+    component: () => import('../pages/Projects.vue')
   },
   {
     path: '/project/:projectSlug',
     name: 'ProjectDetail',
-    component: ProjectDetail,
+    component: () => import('../pages/ProjectDetail.vue'),
     props: true
   },
   {
     path: '/services',
     name: 'Services',
-    component: ServicesPage
+    component: () => import('../pages/ServicesPage.vue')
   },
   {
     path: '/team',
     name: 'Team',
-    component: TeamPage
+    component: () => import('../pages/TeamPage.vue')
   },
   {
     path: '/clients',
     name: 'Clients',
-    component: ClientsPage
+    component: () => import('../pages/ClientsPage.vue')
   },
   {
     path: '/blog',
     name: 'Blog',
-    component: BlogPage
+    component: () => import('../pages/BlogPage.vue')
   },
   {
     path: '/faq',
     name: 'FAQ',
-    component: FAQPage
+    component: () => import('../pages/FAQPage.vue')
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: ContactPage
+    component: () => import('../pages/ContactPage.vue')
   }
 ]
 
