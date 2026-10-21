@@ -45,6 +45,8 @@ onMounted(() => {
         <img
           :src="ctaBg"
           alt="Fortune Rise Groups landscape design and garden execution"
+          width="1920"
+          height="1080"
           class="cta-bg-img w-full h-[120%] object-cover opacity-20 absolute top-[-10%] will-change-transform"
           loading="lazy"
           decoding="async"

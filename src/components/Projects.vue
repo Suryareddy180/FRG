@@ -106,8 +106,10 @@ onMounted(() => {
             <img
               :src="getProjectImage(project)"
               :alt="project.title"
+              width="800"
+              height="1000"
               class="w-full h-[120%] object-cover absolute top-[-10%] transition-transform duration-700 will-change-transform group-hover:scale-110"
-              loading="auto"
+              loading="lazy"
               decoding="async"
             />
             

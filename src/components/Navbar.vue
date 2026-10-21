@@ -86,8 +86,10 @@ const navLinks = [
         <img
           :src="logoSrc"
           alt="Fortune Rise Groups logo"
+          width="160"
+          height="160"
+          class="hidden lg:block w-auto object-contain drop-shadow-sm origin-left transition-all duration-700"
           :class="[
-            'hidden lg:block w-auto object-contain drop-shadow-sm origin-left transition-all duration-700',
             showBigLogo ? 'h-30 scale-125' : (useSolidNavbar ? 'h-28 scale-95' : 'h-44 scale-100')
           ]"
         />
