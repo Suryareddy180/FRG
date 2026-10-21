@@ -118,7 +118,7 @@ onUnmounted(() => {
     </div>
 
     <div class="relative z-10 container-wide px-fluid-2 text-center pt-48 md:pt-64 lg:pt-72 pb-24">
-      <h1 ref="headlineRef" class="text-clamp-hero font-heading font-bold !text-white mb-8 leading-[1.1] opacity-0 text-balance drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
+      <h1 ref="headlineRef" class="text-clamp-hero font-heading font-bold !text-white mb-8 leading-[1.1] text-balance drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
         Crafting Nature's <span class="text-primary-400 italic">Masterpieces</span>
       </h1>
       <p ref="subtextRef" class="text-clamp-sub !text-earthy-100 mb-8 max-w-3xl mx-auto font-light leading-relaxed text-balance drop-shadow-lg">
