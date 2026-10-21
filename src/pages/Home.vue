@@ -3,6 +3,7 @@ import { onMounted, onUnmounted } from 'vue'
 import Navbar from '../components/Navbar.vue'
 import Hero from '../components/Hero.vue'
 import About from '../components/About.vue'
+import Services from '../components/Services.vue'
 import ClientStories from '../components/ClientStories.vue'
 import CTA from '../components/CTA.vue'
 import Footer from '../components/Footer.vue'
@@ -72,6 +73,7 @@ onUnmounted(() => {
     <main>
       <Hero id="home" />
       <About id="about" class="reveal" />
+      <Services id="services" :is-page="false" class="reveal" />
       <ClientStories id="testimonials" class="reveal" />
       <CTA class="reveal" />
     </main>

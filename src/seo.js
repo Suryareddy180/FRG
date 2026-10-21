@@ -54,6 +54,120 @@ const slugToLabel = (slug) =>
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(' ')
 
+export const TARGET_SERVICES = [
+  {
+    name: 'Gardening Services',
+    description: 'Turnkey gardening services in Hyderabad for luxury residential villas, farmhouses, institutions, and corporate landscapes.'
+  },
+  {
+    name: 'Garden Maintenance Services',
+    description: 'Comprehensive garden maintenance services including scheduled pruning, organic plant fertilization, soil enrichment, and seasonal shrub care.'
+  },
+  {
+    name: 'Landscape Contractors',
+    description: 'Premier turnkey landscape contractors in Hyderabad delivering hardscape construction, paving, water features, softscaping, and irrigation.'
+  },
+  {
+    name: '3D Landscape Designing Services',
+    description: 'Realistic 3D landscape designing services, architectural elevation renders, and virtual walkthroughs for farmhouses, villas, and resorts.'
+  },
+  {
+    name: 'Architects For Farm House',
+    description: 'Specialized architects for farm house landscapes, rural retreat master planning, fruit orchard zoning, swimming pool surrounds, and gazebos.'
+  },
+  {
+    name: 'Architects For Landscape',
+    description: 'Qualified architects for landscape master planning, environmental grading, sustainable drainage, and high-end outdoor architecture.'
+  },
+  {
+    name: 'Corporate Gift Plant Dealers',
+    description: 'Trusted corporate gift plant dealers in Hyderabad offering curated indoor desktop plants, air-purifying succulents, and branded green gift hampers.'
+  },
+  {
+    name: 'Designer Landscape Services',
+    description: 'Bespoke designer landscape services combining artistic focal elements, natural stone artistry, architectural lighting, and designer water walls.'
+  },
+  {
+    name: 'Garden Designers',
+    description: 'Creative garden designers conceptualizing Zen gardens, rockeries, tropical lush retreats, English country lawns, and modern minimalist courtyards.'
+  },
+  {
+    name: 'Garden Developers',
+    description: 'Master garden developers executing large gated community layout parks, avenue plantations, clubhouse gardens, and commercial outdoor zones.'
+  },
+  {
+    name: 'Garden Landscaping Services',
+    description: 'Full-spectrum garden landscaping services from earth grading, topsoil enrichment, and specimen tree planting to lush sod turfing.'
+  },
+  {
+    name: 'Gardening Services For Residential',
+    description: 'Customized gardening services for residential villas, private backyards, shaded sit-outs, kitchen gardens, and flowering borders.'
+  },
+  {
+    name: 'Indoor Gardening Services',
+    description: 'Professional indoor gardening services featuring vertical green walls, atrium gardens, moss art, and indoor container plant maintenance.'
+  },
+  {
+    name: 'Indoor Landscape Designing Services',
+    description: 'Aesthetic indoor landscape designing services for double-height luxury villa atriums, corporate lobbies, hotel receptions, and courtyards.'
+  },
+  {
+    name: 'Landscape Consultants',
+    description: 'Leading landscape consultants providing feasibility studies, soil-water testing, microclimate analysis, cost budgeting, and project supervision.'
+  },
+  {
+    name: 'Landscape Design Consultants',
+    description: 'Expert landscape design consultants crafting detailed CAD drawings, planting schemes, drainage layouts, and lighting plans.'
+  },
+  {
+    name: 'Landscape Designers For Farmhouse',
+    description: 'Creative landscape designers for farmhouse properties focusing on native rustic aesthetics, walking trails, firepits, and natural pond ecosystems.'
+  },
+  {
+    name: 'Landscape Designing Services',
+    description: 'End-to-end landscape designing services including conceptual sketches, material specifications, 3D renderings, and execution blueprints.'
+  },
+  {
+    name: 'Landscape Garden Maintenance Services',
+    description: 'Scheduled commercial and residential landscape garden maintenance services with dedicated on-site gardening teams and agronomist audits.'
+  },
+  {
+    name: 'Landscape Gardening',
+    description: 'Artful landscape gardening integrating flowering perennials, ornamental foliage, hedge screens, and textured ground covers.'
+  },
+  {
+    name: 'Lawn Grass Dealers',
+    description: 'Direct lawn grass dealers supplying high-grade natural turf rolls including Mexican grass, Bermuda grass, Korean carpet grass, and Nilgiri grass.'
+  },
+  {
+    name: 'Lawn Grass Distributors',
+    description: 'Wholesale lawn grass distributors providing bulk turf transport, rapid lawn grass laying, weed treatment, and root establishment across Telangana.'
+  },
+  {
+    name: 'Office Gardening Services',
+    description: 'Corporate office gardening services creating biophilic work environments, air-purifying workstation planters, and executive suite greenery.'
+  },
+  {
+    name: 'Outdoor Landscape Designing Services',
+    description: 'Premium outdoor landscape designing services creating swimming pool decks, wooden pergolas, barbecue stations, and outdoor garden pavilions.'
+  },
+  {
+    name: 'Rock Garden Maintenance Services',
+    description: 'Specialized rock garden maintenance services covering natural stone cleaning, weed eradication, gravel replenishment, succulent care, and drainage checks.'
+  },
+  {
+    name: 'Roof Gardening Services',
+    description: 'Engineered roof gardening services featuring lightweight soil mixtures, root barriers, waterproofing protection, and automated micro-irrigation.'
+  },
+  {
+    name: 'Terrace Landscape Gardening',
+    description: 'Luxury terrace landscape gardening converting concrete rooftops into scenic green oases with weather-proof timber decking and mood illumination.'
+  }
+]
+
+export const ALL_SEO_KEYWORDS = TARGET_SERVICES.map((s) => s.name).join(', ') +
+  ', Hyderabad, Telangana, Andhra Pradesh, Kukatpally, Gachibowli, Jubilee Hills, Banjara Hills, Hitec City, Madhapur, Kondapur, Kokapet'
+
 export const businessSchema = {
   '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
   '@id': `${SITE_URL}/#business`,
@@ -69,7 +183,7 @@ export const businessSchema = {
   currenciesAccepted: 'INR',
   paymentAccepted: 'Cash, Credit Card, Bank Transfer, UPI',
   description:
-    'Fortune Rise Groups delivers premium landscape architecture, 3D landscape designing, garden development, and maintenance services across Hyderabad, Telangana, and Andhra Pradesh.',
+    'Fortune Rise Groups delivers premium landscape architecture, 3D landscape designing, garden development, lawn grass supply, and maintenance services across Hyderabad, Telangana, and Andhra Pradesh.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Phase 2, Shanthi Nilayam, 15-25/648, Kukatpally Housing Board Colony, KPHB Phase 2, Kukatpally',
@@ -83,6 +197,7 @@ export const businessSchema = {
     latitude: 17.4938,
     longitude: 78.3995
   },
+  hasMap: 'https://maps.google.com/?cid=12093594972639068176',
   areaServed: [
     { '@type': 'City', name: 'Hyderabad' },
     { '@type': 'City', name: 'Secunderabad' },
@@ -97,51 +212,27 @@ export const businessSchema = {
       closes: '19:00'
     }
   ],
+  knowsAbout: TARGET_SERVICES.map((s) => s.name),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Landscaping & Gardening Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: '3D Landscape Designing Services',
-          description: 'Custom 3D modeling and conceptual landscape planning for residential, commercial, and farmhouse estates.'
-        }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Landscape Contractors',
-          description: 'Turnkey landscape execution and hardscape-softscape contracting across Hyderabad.'
-        }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Garden Maintenance Services',
-          description: 'Comprehensive pruning, nutrient care, lawn rejuvenation, and rock garden maintenance services.'
-        }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Terrace Landscape Gardening & Roof Gardening Services',
-          description: 'Engineered lightweight drainage, automated drip irrigation, and luxury terrace garden installations.'
-        }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Architects For Farm House Landscapes',
-          description: 'Estate master planning, natural plantations, and farmhouse outdoor design by certified landscape architects.'
-        }
+    name: 'Complete Landscape & Gardening Services Catalog',
+    itemListElement: TARGET_SERVICES.map((service) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: service.name,
+        description: service.description,
+        provider: {
+          '@id': `${SITE_URL}/#business`
+        },
+        areaServed: [
+          { '@type': 'City', name: 'Hyderabad' },
+          { '@type': 'City', name: 'Secunderabad' },
+          { '@type': 'AdministrativeArea', name: 'Telangana' },
+          { '@type': 'AdministrativeArea', name: 'Andhra Pradesh' }
+        ]
       }
-    ]
+    }))
   }
 }
 
@@ -152,9 +243,8 @@ const buildRouteSeo = (to) => {
     return {
       title: 'Landscape Contractors & Gardening Services in Hyderabad | Fortune Rise Groups',
       description:
-        'Fortune Rise Groups delivers premium landscape gardening, 3D landscape designing, garden maintenance, and landscape contractor services in Hyderabad.',
-      keywords:
-        'Landscape Contractors, Garden Landscaping Services, Landscape Gardening, Gardening Services, Garden Maintenance Services, 3D Landscape Designing Services, Garden Designers, Garden Developers, Designer Landscape Services, Landscape Designing Services, Hyderabad',
+        'Fortune Rise Groups delivers premium landscape gardening, 3D landscape designing, garden maintenance, lawn grass supply, and landscape contractor services in Hyderabad.',
+      keywords: ALL_SEO_KEYWORDS,
       path,
       type: 'website',
       breadcrumbs: [{ name: 'Home', path: '/' }]
@@ -163,17 +253,16 @@ const buildRouteSeo = (to) => {
 
   if (to.name === 'Services') {
     return {
-      title: 'Landscape Designing Services & Consultants in Hyderabad | Fortune Rise Groups',
+      title: 'Landscape Designing Services & Contractors in Hyderabad | Fortune Rise Groups',
       description:
-        'Expert landscape designing services and landscape consultants in Hyderabad. Providing 3D landscape designing, outdoor landscape design, and complete garden development.',
-      keywords:
-        'Landscape Designing Services, Landscape Design Consultants, Landscape Consultants, 3D Landscape Designing Services, Outdoor Landscape Designing Services, Indoor Landscape Designing Services, Garden Landscaping Services, Landscape Contractors Hyderabad',
+        'Expert landscape designing services and landscape consultants in Hyderabad. Providing 3D landscape designing, lawn grass dealers, rock garden maintenance, and complete garden development.',
+      keywords: ALL_SEO_KEYWORDS,
       path,
       type: 'website',
       serviceSchema: {
         name: 'Landscape Designing & Garden Development Services',
         description:
-          'Comprehensive 3D landscape designing, garden developers, landscape contracting, and outdoor planning for residential, commercial, and farmhouse projects.'
+          'Comprehensive 3D landscape designing, garden developers, landscape contracting, lawn grass supply, rock garden maintenance, and outdoor planning for residential, commercial, and farmhouse projects.'
       },
       breadcrumbs: [
         { name: 'Home', path: '/' },
@@ -479,6 +568,46 @@ const faqSchemaData = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes. Our experienced landscape architects and designers specialize in farmhouse master planning, entry tree canopies, organic fruit orchards, swimming pool surrounds, and leisure sit-outs across Hyderabad and outskirts.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you supply and install natural lawn grass (Lawn Grass Dealers & Distributors)?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. As trusted lawn grass dealers and distributors in Hyderabad, Fortune Rise Groups supplies and installs premium natural turf varieties including Mexican Grass, Bermuda Turf, Korean Carpet Grass, and Nilgiri Grass for residential lawns, commercial layouts, and sports villas.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What do your Rock Garden Maintenance and Garden Maintenance Services include?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our comprehensive garden maintenance services and specialized rock garden maintenance services include periodic pruning, lawn mowing, organic soil fertilization, pest monitoring, boulder repositioning, gravel cleaning, drip irrigation calibration, and seasonal plant replacements.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you provide Indoor Gardening Services and Corporate Gift Plants?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We offer turnkey indoor gardening services, indoor landscape designing services, and office gardening services for IT parks, hotels, and luxury residences. In addition, we are corporate gift plant dealers supplying customized branded indoor planters and succulent arrangements.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How do your 3D Landscape Designing Services and Farmhouse Architects operate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our certified architects for landscape and architects for farm house create detailed 2D master plans and realistic 3D landscape designing services. We visualize hardscape pathways, water bodies, gazebos, swimming pool decks, and plantation layers before site execution starts.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What solutions do you offer for Terrace Landscape Gardening and Roof Gardening Services?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We engineer lightweight, fully waterproofed terrace landscape gardening and roof gardening services. We incorporate root barriers, lightweight potting media, automatic drip irrigation, shaded sit-outs, and vertical green walls designed specifically for rooftop microclimates.'
       }
     }
   ]

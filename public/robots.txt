@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://fortunerisegroups.in/sitemap.xml
+Agentmap: https://fortunerisegroups.in/ai-catalog.json

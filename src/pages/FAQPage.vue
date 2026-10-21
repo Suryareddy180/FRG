@@ -41,6 +41,31 @@ const faqItems = [
       'Yes. Our experienced landscape architects and designers specialize in farmhouse master planning, entry tree canopies, organic fruit orchards, swimming pool surrounds, and leisure sit-outs across Hyderabad and outskirts.'
   },
   {
+    question: 'Do you supply and install natural lawn grass (Lawn Grass Dealers & Distributors)?',
+    answer:
+      'Yes. As trusted lawn grass dealers and distributors in Hyderabad, Fortune Rise Groups supplies and installs premium natural turf varieties including Mexican Grass, Bermuda Turf, Korean Carpet Grass, and Nilgiri Grass for residential lawns, commercial layouts, and sports villas.'
+  },
+  {
+    question: 'What do your Rock Garden Maintenance and Garden Maintenance Services include?',
+    answer:
+      'Our comprehensive garden maintenance services and specialized rock garden maintenance services include periodic pruning, lawn mowing, organic soil fertilization, pest monitoring, boulder repositioning, gravel cleaning, drip irrigation calibration, and seasonal plant replacements.'
+  },
+  {
+    question: 'Do you provide Indoor Gardening Services and Corporate Gift Plants?',
+    answer:
+      'Yes. We offer turnkey indoor gardening services, indoor landscape designing services, and office gardening services for IT parks, hotels, and luxury residences. In addition, we are corporate gift plant dealers supplying customized branded indoor planters and succulent arrangements.'
+  },
+  {
+    question: 'How do your 3D Landscape Designing Services and Farmhouse Architects operate?',
+    answer:
+      'Our certified architects for landscape and architects for farm house create detailed 2D master plans and realistic 3D landscape designing services. We visualize hardscape pathways, water bodies, gazebos, swimming pool decks, and plantation layers before site execution starts.'
+  },
+  {
+    question: 'What solutions do you offer for Terrace Landscape Gardening and Roof Gardening Services?',
+    answer:
+      'We engineer lightweight, fully waterproofed terrace landscape gardening and roof gardening services. We incorporate root barriers, lightweight potting media, automatic drip irrigation, shaded sit-outs, and vertical green walls designed specifically for rooftop microclimates.'
+  },
+  {
     question: 'Can I see past work before starting?',
     answer:
       'Absolutely. You can browse our project portfolio by category and also view project-specific case studies in our blog section to understand planning decisions and real execution outcomes.'

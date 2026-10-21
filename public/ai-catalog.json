@@ -1,0 +1,41 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Fortune Rise Groups",
+    "identifier": "did:web:fortunerisegroups.in",
+    "documentationUrl": "https://fortunerisegroups.in/services",
+    "logoUrl": "https://fortunerisegroups.in/favicon.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:fortunerisegroups.in:service:landscape-architecture",
+      "displayName": "Landscape Architecture & 3D Design",
+      "type": "application/json",
+      "url": "https://fortunerisegroups.in/services",
+      "description": "Turnkey landscape architecture, 3D landscape designing, master planning, and contracting for farmhouses, villas, and commercial spaces.",
+      "tags": [
+        "landscaping",
+        "landscape-architect",
+        "3d-design",
+        "farmhouse-architects",
+        "hyderabad"
+      ],
+      "capabilities": [
+        "LandscapeArchitecture",
+        "FarmhousePlanning",
+        "3DLandscapeDesign",
+        "LawnGrassSupply",
+        "GardenMaintenance"
+      ],
+      "representativeQueries": [
+        "landscape architects near me",
+        "architects for farm house in Hyderabad",
+        "3D landscape designing services",
+        "lawn grass dealers in Hyderabad",
+        "garden maintenance services"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-21T00:00:00Z"
+    }
+  ]
+}
