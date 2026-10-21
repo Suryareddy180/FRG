@@ -76,7 +76,7 @@ const socialIcons = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
         <!-- Logo and Info -->
         <div class="space-y-8">
-          <RouterLink to="/" class="inline-flex items-center gap-4 group">
+          <RouterLink to="/" aria-label="Fortune Rise Groups Home" class="inline-flex items-center gap-4 group">
             <img
               :src="logoSrc"
               alt="Fortune Rise Groups logo"

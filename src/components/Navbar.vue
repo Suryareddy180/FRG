@@ -78,7 +78,11 @@ const navLinks = [
     >
       <!-- Logo -->
 
-      <RouterLink to="/" class="flex items-center gap-3 group">
+      <RouterLink
+        to="/"
+        aria-label="Fortune Rise Groups Home"
+        class="flex items-center gap-3 group"
+      >
         <img
           :src="logoSrc"
           alt="Fortune Rise Groups logo"
@@ -90,6 +94,7 @@ const navLinks = [
         <span :class="['text-xl lg:text-2xl font-heading font-bold transition-colors duration-500 tracking-tight hidden sm:inline xl:hidden', useSolidNavbar ? 'text-white' : 'text-white!']">
           Fortune Rise Groups
         </span>
+        <span class="sr-only">Fortune Rise Groups Home</span>
       </RouterLink>
 
       <div
